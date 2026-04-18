@@ -8,7 +8,15 @@ import { useTheme } from 'next-themes';
 import { Sun, Moon, Monitor, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const navLinks = [
+interface NavLink {
+  label: string;
+  href: string;
+  section: string | null;
+  subpageHref?: string;
+  external?: boolean;
+}
+
+const navLinks: NavLink[] = [
   { label: 'Home', href: '/#hero', section: 'hero' },
   { label: 'Career', href: '/#career', section: 'career' },
   { label: 'Portfolio', href: '/#portfolio', section: 'portfolio' },
@@ -17,6 +25,7 @@ const navLinks = [
   { label: "Reading's", href: '/readings', section: null },
   { label: 'Toolbox', href: '/toolbox', section: null },
 ];
+
 
 type Theme = 'light' | 'dark' | 'system';
 

@@ -1,0 +1,30 @@
+{
+  // Disable built-in CSS validator — Tailwind CSS v4 uses its own at-rules
+  // (@theme, @custom-variant, @apply) that VS Code's linter doesn't understand.
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+
+  // Tailwind CSS IntelliSense — tell it which files contain Tailwind classes
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+
+  // TypeScript
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // Editor
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
